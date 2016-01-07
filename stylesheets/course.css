@@ -10,7 +10,7 @@
 
 body {
   font-family: "Helvetica Neue","Microsoft Yahei",sans-serif,serif;
-  background: url("../images/bg.jpg") repeat;
+  background: url("../img/bg.jpg") repeat;
   margin-top: 80px; }
 
 hr {
@@ -65,7 +65,7 @@ nav .container {
     box-shadow: 0 0 5px 0 #A1A1A1; }
     .list-col-4 .home-course h3,
     .list-col-4 .home-essay h3 {
-      width: 80%;
+      width: 100%;
       text-align: left;
       font-size: 1.7rem;
       font-weight: bold;
@@ -144,6 +144,36 @@ nav .container {
       padding-bottom: 2%;
       margin-bottom: 0; }
 
+@media (max-width: 1024px) {
+  .list-col-4 .home-course,
+  .list-col-4 .home-essay {
+    width: 30%;
+    margin-left: 2.5%;
+    margin-bottom: 7.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; } }
+@media (max-width: 960px) {
+  .list-col-4 .home-course,
+  .list-col-4 .home-essay {
+    width: 45%;
+    margin-left: 3.33333%;
+    margin-bottom: 10%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; } }
+@media (max-width: 640px) {
+  .list-col-4 .home-course,
+  .list-col-4 .home-essay {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; } }
 #course .course-card {
   width: 45%;
   margin-left: 3.33333%;
@@ -193,8 +223,8 @@ table {
       width: 20%;
       font-size: 1.4em;
       font-weight: bold; }
-  .course-rating .rates-row #flat-slider {
-    width: 50%;
+  .course-rating .rates-row #slider {
+    width: 60%;
     display: inline-block;
     left: 3%;
     vertical-align: middle; }
