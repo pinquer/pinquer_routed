@@ -11,7 +11,7 @@
     <link rel="Shortcut Icon" type="image/x-icon" href="../images/shortcut_icon.png" />
     <title>Pinquer 評課部落</title>
     <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css"> -->
-    <link rel="stylesheet" href="../stylesheets/jquery-ui-1.10.4.custom.min.css">    
+    <link rel="stylesheet" href="../stylesheets/jquery-ui-1.10.4.slider.css">    
     <link rel="stylesheet" href="../stylesheets/slider-pips.css">
     <!-- Bootstrap Core CSS -->
     <link href="../stylesheets/bootstrap.css" rel="stylesheet">
@@ -126,21 +126,21 @@
         <div class="rates-row">
             <p>實用性</p>
             <!-- <p>4.8</p> -->
-            <div class="flat-slider1" id="slider"></div>
+            <div class="flat-slider1 green-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-1"> -->
         </div>
         <hr>
         <div class="rates-row">
             <p>困難度</p>
             <!-- <p>2.5</p> -->
-            <div class="flat-slider2" id="slider"></div>
+            <div class="flat-slider2 yellow-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-2"> -->
         </div>
         <hr>
         <div class="rates-row">
             <p>忙碌度</p>
             <!-- <p>3.5</p> -->
-            <div class="flat-slider3" id="slider"></div>
+            <div class="flat-slider3 yellow-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-3"> -->
         </div> 
     </div>
@@ -212,56 +212,23 @@
 
     $(".flat-slider1")
         .slider({
-            min:0,
-            max:5,
-            step:0.1,
             range: "max",
-            value: 4.8,
+            value: 90,
 
-    })
-     .slider("pips", {
-        step: 10,
-        first: false,
-        last: false,
-        rest: false,
-
-    })
-    .slider("float");
+    }).slider("disable");
 
     $(".flat-slider2")
         .slider({
-            min:0,
-            max:5,
-            step:0.1,
             range: "max",
-            value: 2.5,
+            value: 80,
 
-    })
-     .slider("pips", {
-        step: 10,
-        first: false,
-        last: false,
-        rest: false,
-
-    })
-    .slider("float");   
+    }).slider("disable");   
 
     $(".flat-slider3")
-        .slider({
-            min:0,
-            max:5,
-            step:0.1,
+        .slider({ 
             range: "max",
-            value: 3.5,
-
-    })
-     .slider("pips", {
-        step: 10,
-        first: false,
-        last: false,
-        rest: false,
-    })
-    .slider("float");    
+            value: 10,
+    }).slider("disable");    
 
     var homeCourse = $('.home-course'),
         logoGreen = '#209e40',
