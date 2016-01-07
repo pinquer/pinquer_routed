@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pinquer 評課部落</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/shortcut_icon.png" />
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/login.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<style>
+    .error {
+        text-align: left;
+        font-size: 14px;
+        color: #a94442;
+    }
+</style>
+
+</head>
+
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img src="images/pinquer_logo.png" alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                  <li>
+                    <a href="" class="page-scroll">瀏覽課程</a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/login">登入註冊</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search" >
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="輸入課名">
+                  </div>
+                  <button type="/Volumes/Macintosh%20HD/Users/YuChuChen/Downloads/pinquer-gh-pages/login.htmlsubmit" class="btn btn-default">搜尋</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   
+   
+<!--    here  -->
+<div class="typein">
+   <div class="login-box">
+       <form action="" id="login-form" method="post">
+        <h3 class="color-black">登入</h3>
+            <div class="form-group">
+                <h5 >學校信箱</h5>
+                <input type="email" name="login_email" placeholder="ex.100100001@nccu.edu.tw" class="form-control required">
+            </div>
+            <div class="form-group">
+                <h5>密碼</h5>
+                <input type="password" name="login_pwd" class="form-control required">
+            </div>
+        <button type="submit" value="login" name= "login" class="btn btn-default" >登入</button>           
+       </form>
+
+		
+		
+    </div> 
+    
+    <div class="sign-up-box">
+        <form action="" id="register-form" method="post">
+            <h3>註冊</h3>
+            <div class="form-group">
+                <h5>學校信箱</h5>
+                <input type="email" name="register_email" placeholder="ex.10010001@nccu.edu.tw" class="form-control required">                
+            </div>
+            <div class="form-group">
+                <h5>密碼</h5>
+                <input type="password" name="register_pwd" class="checkpwdhard form-control required" id="register_pwd">
+            </div>
+            <div class="form-group">
+                <h5>再輸入一次密碼</h5>
+                <input type="password" name="register_pwd_again" class="form-control" id="register_pwd_again">
+            </div>
+            <button name="register" type="submit" value="register" class="btn btn-default">確認送出</button>            
+        </form>
+
+    </div>
+</div>   
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    //自己這個站的 js
+    $("#login-form").validate({
+        submitHandler: function(form) {
+            form.submit();
+        },
+        errorPlacement: function(error, element) {
+            element.closest('.form-group').removeClass('has-success');
+            element.closest('.form-group').addClass('has-error');
+            element.closest('input').after(error);
+        },
+        success: function(element) {
+            element.closest('.form-group').removeClass('has-error');
+            element.closest('.form-group').addClass('has-success');
+        },
+        rules: {
+            login_email: {
+                required: true,
+                email: true
+            },
+            login_pwd: {
+                required: true,
+                
+            }
+        }
+    });
+
+    $("#register-form").validate({
+        submitHandler: function(form) {
+            form.submit();
+        },
+        success: function(element) {
+            element.closest('.form-group').removeClass('has-error');
+            element.closest('.form-group').addClass('has-success');
+        },
+        errorPlacement: function(error, element) {
+            element.closest('.form-group').addClass('has-error');
+            element.closest('.form-group').removeClass('has-success');
+            element.closest('input').after(error);
+        },        
+        rules: {
+            register_email: {
+                required: true,
+                email: true
+            },
+            register_pwd: {
+                required: true,
+                checkpwdhard: true
+            },
+            register_pwd_again: {
+                required: true,
+                equalTo: "#register_pwd"
+            }
+        }
+    });
+
+    $.extend($.validator.messages, {
+        required: "此欄位必填.",
+        email: "請輸入含有「@」的 Email 格式.",
+        equalTo: "請再次輸入相同的值.",
+    });
+    $.validator.addMethod("checkpwdhard", function( value, element ) {
+        var str = value;
+        var result = false;
+     
+        if(str.length > 0){
+            var patt = /^[a-zA-Z0-9]{6,20}$/;
+            var result1 = patt.test(str);
+            //先測試是否有英文
+            var pattEN = /[a-zA-Z]{1,}/;
+            result2 = pattEN.test(str);
+            //先測試是否有數字
+            var pattDigit = /[0-9]{1,}/;
+            result3 = pattDigit.test(str);
+     
+            if(result1 == true && result2 == true && result3 == true){
+                result = true;
+            } else{
+                result = false;
+            }
+        } else {
+            result = true;
+        }
+        return result;
+    }, "密碼需為 6～20個字元的英文字母、數字混合，但不含空白鍵及標點符號。");
+});   
+
+</script>
+    
+<footer id="footerDomain">
+    <div class="bottom-info">
+    <img src="images/logo_white.png" alt="">
+      <p>COPYRIGHT © ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+</body>
+
+</html>
