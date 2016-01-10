@@ -150,7 +150,7 @@
     <% if(loggedIn) { %>
         <button type="button" class="btn btn-success" id="type-btn">發表心得、提問</button>
     <% } else {  %>
-        <a href="/login"><button type="button" class="btn btn-success">登入</button></a>
+        <a href="/login" id="login"><button type="button" class="btn btn-success">發文前請先登入</button></a>
     <% } %>
     <div class="type-in">
         <form action="" method="post">
@@ -307,6 +307,17 @@
 
 $('.type-in').hide();
 // $('.edit-rate').hide();
+$('#login').hide();
+
+$('#type-btn').on('mouseover', function(){
+    $(this).hide();
+    $('#login').show();
+});
+$('#login').on('mouseleave', function(){
+    $(this).hide();
+    $('#type-btn').show();
+});
+
 
 $('#type-btn').on('click', function(){
     $('.type-in').slideDown();
