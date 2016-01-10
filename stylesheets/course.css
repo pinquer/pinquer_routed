@@ -232,6 +232,17 @@ table {
 .edit-rates-row label {
   width: 10%; }
 
+.feedback .score {
+  font-size: 16px;
+  color: #209e40;
+  margin-top: 20px;
+  width: 30%;
+  display: inline-block; }
+.feedback .score-title {
+  border-radius: 5px;
+  border: 2px solid #209e40;
+  padding: 2px; }
+
 @media (max-width: 996px) {
   #course .course-card {
     width: 90%;

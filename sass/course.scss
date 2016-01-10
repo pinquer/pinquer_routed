@@ -73,6 +73,22 @@ table {
 	width: 10%;
 }
 
+.feedback {
+	.score {
+		font-size: 16px;
+		color: $logoGreen;
+		margin-top: 20px;
+		width: 30%;
+		display:inline-block;
+	}
+	.score-title {
+		// width: 50%;
+		border-radius:5px;
+		border: 2px solid $logoGreen;
+		padding:2px;
+	}
+}
+
 @media (max-width: 996px) {
 	#course {
 		.course-card {

@@ -137,7 +137,7 @@
         </div>
         <hr>
         <div class="rates-row">
-            <p>忙碌度</p>
+            <p>工作量</p>
             <p class="rate3"></p>
             <div class="flat-slider3 yellow-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-3"> -->
@@ -177,7 +177,7 @@
                     </div>
                 <hr>
                 <div class="rates-row edit-rates-row">
-                    <p>忙碌度</p>
+                    <p>工作量</p>
                     <label class="rsize3">請拖曳選擇</label>
                     <div class="edit-slider3 edit-slider yellow-slider" id="slider"></div>
                     <input class="edit-slider1 edit-slider green-slider" id="edit-busy" value="" style="visibility:hidden;" name="workload">                
@@ -222,11 +222,13 @@
                     <p class="essay-type feedback">心得</p>
                     <h3> <%= essay.title %></h3>
                     <hr>
-
-                    <p>課程實用度：<%= essay.usefulness %>  分</p>
+                    <p class="score"><span class="score-title">實用度</span>：<%= essay.usefulness %></p>
+                    <p class="score"><span class="score-title">困難度</span>：<%= essay.difficulty %></p>
+                    <p class="score"><span class="score-title">工作量</span>：<%= essay.workload %></p>
+<!--                     <p>課程實用度：<%= essay.usefulness %>  分</p>
                     <p>課程難易度：<%= essay.difficulty %>  分</p>
                     <p>課程工作量：<%= essay.workload %>  分</p>
-                    <p class="post-time"> <%= essay.by %> </p>
+ -->                    <p class="post-time"> <%= essay.by %> </p>
                     <p class="post-time">2015/12/15發布</p>
                     
                     <div class="bottom feedback">
@@ -243,11 +245,14 @@
             <% } %>
             <% i++; %>
         <% }) %>
-        <!--<a href="essay-feedback.html">
+        <!-- <a href="essay-feedback.html">
             <div class="home-essay feedback" data-type="feedback">
                 <p class="essay-type feedback">心得</p>
                 <h3>基本上這是一篇反推文</h3>
                 <hr>
+                <p class="score"><span class="score-title">實用度</span>：4</p>
+                <p class="score"><span class="score-title">難易度</span>：4</p>
+                <p class="score"><span class="score-title">工作量</span>：4</p>
                 <p class="post-time">2015/12/15發布</p>
                 <div class="bottom feedback">
                     <p>
@@ -272,7 +277,7 @@
                     </p>           
                 </div>        
             </div>
-        </a>-->
+        </a> -->
 <!--         <a href="essay-notice.html">
             <div class="home-essay notice" data-type="notice">
                 <p class="essay-type notice">公告</p>
