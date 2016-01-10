@@ -204,14 +204,15 @@ table {
   margin: 0;
   padding: 0;
   border-top: 1.5px solid #f4f4f4; }
-.course-rating .rates-row {
+
+.rates-row {
   margin: 10px 0 10px 0; }
-  .course-rating .rates-row p {
+  .rates-row p {
     display: inline-block;
     margin: 0;
     text-align: center;
     vertical-align: middle; }
-    .course-rating .rates-row p:first-child {
+    .rates-row p:first-child {
       border-radius: 5px;
       border: 2px solid #209e40;
       width: 20%;
@@ -219,14 +220,27 @@ table {
       color: #209e40;
       font-weight: bold;
       letter-spacing: 2px; }
-    .course-rating .rates-row p:nth-child(2) {
-      width: 20%;
+    .rates-row p:nth-child(2) {
+      width: 10%;
       font-size: 1.4em;
       font-weight: bold; }
-  .course-rating .rates-row #slider {
-    width: 70%;
+  .rates-row #slider {
+    width: 65%;
     display: inline-block;
-    left: 5%;
     vertical-align: middle; }
+
+.edit-rates-row label {
+  width: 10%; }
+
+@media (max-width: 996px) {
+  #course .course-card {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 5%; } }
 
 /*# sourceMappingURL=course.css.map */

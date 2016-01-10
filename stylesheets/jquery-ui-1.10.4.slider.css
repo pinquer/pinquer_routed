@@ -170,26 +170,25 @@
 }
 .ui-widget-content.green-slider {
 	/*border: 1px solid #dddddd;*/
-background: #209e40; /* Old browsers */
-background: -moz-linear-gradient(left, #209e40 0%, #00ff00 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #209e40 0%,#00ff00 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, #209e40 0%,#00ff00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#209e40', endColorstr='#00ff00',GradientType=1 );	color: #444444;
+background: #209e40; 
+background: -moz-linear-gradient(left, #209e40 0%, #00ff00 100%); 
+background: -webkit-linear-gradient(left, #209e40 0%,#00ff00 100%); 
+background: linear-gradient(to right, #209e40 0%,#00ff00 100%); 
 }
 .ui-widget-content.yellow-slider {
 	/*border: 1px solid #dddddd;*/
-background: #fcee21; /* Old browsers */
-background: -moz-linear-gradient(left, #fcee21 0%, #f15a24 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #fcee21 0%,#f15a24 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, #fcee21 0%,#f15a24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcee21', endColorstr='#f15a24',GradientType=1 );}
+background: #fcee21; 
+background: -moz-linear-gradient(left, #fcee21 0%, #f15a24 100%); 
+background: -webkit-linear-gradient(left, #fcee21 0%,#f15a24 100%); 
+background: linear-gradient(to right, #fcee21 0%,#f15a24 100%); 
+}
 
 .ui-widget-content a {
 	color: #444444;
 }
 .ui-widget-header {
 	/*border: 1px solid #dddddd;*/
-	background: #EAEAEA url("images/ui-bg_highlight-soft_50_dddddd_1x100.png") 50% 50% repeat-x;
+	background:#f6f6f6 url("images/ui-bg_highlight-soft_50_dddddd_1x100.png") 50% 50% repeat-x;
 	color: #444444;
 	font-weight: bold;
 }
@@ -202,7 +201,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcee21', end
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-	border: 1px solid #dddddd;
+	border: 2px solid #209e40;
 	background: #f6f6f6 url("images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #0073ea;

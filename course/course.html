@@ -104,7 +104,6 @@
 
 <section class="container" id="course">
 <div class="row">
-
     <div class="course-info cardstyle course-card  col-lg-6 col-md-12 col-sm-12">
         <h3><%= course.name %>(<%= course.credit %>學分)</h3>
         <table class="table table-condensed">
@@ -125,27 +124,66 @@
     <div class="course-rating cardstyle course-card col-lg-offset-1 col-lg-5 col-md-12 col-sm-12">
         <div class="rates-row">
             <p>實用性</p>
-            <!-- <p>4.8</p> -->
+            <p class="rate1"></p>
             <div class="flat-slider1 green-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-1"> -->
         </div>
         <hr>
         <div class="rates-row">
             <p>困難度</p>
-            <!-- <p>2.5</p> -->
+            <p class="rate2"></p>
             <div class="flat-slider2 yellow-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-2"> -->
         </div>
         <hr>
         <div class="rates-row">
             <p>忙碌度</p>
-            <!-- <p>3.5</p> -->
+            <p class="rate3"></p>
             <div class="flat-slider3 yellow-slider" id="slider"></div>
             <!-- <input type="text" class="js-range" id="slider-3"> -->
         </div> 
-    </div>
-    
+    </div>  
 </div>
+</section>
+
+<section class="container" id="post">
+    <button type="button" class="btn btn-success" id="type-btn">發表心得、提問</button>
+    <div class="type-in">
+        <form action="">
+            <label for="essay-type">選擇文章類型</label>
+            <select name="essay-type" id="essay-type" class="form-control">
+                 <option value="review" >我要發表心得</option>
+                 <option value="ask">我要提問</option>
+            </select>
+            <label for="title">標題</label><input type="text" class="form-control" id="title" placeholder="請輸入標題">
+            <label for="edit-rate" class="edit-rate">留下你對這門的評分</label>
+            <div class="course-rating edit-rate cardstyle col-lg-12 col-md-12 col-sm-12">
+                <div class="rates-row edit-rates-row">
+                    <p>實用性</p>
+                    <label class="rsize1">請拖曳選擇</label>
+                    <div class="edit-slider1 edit-slider green-slider" id="slider"></div>
+                    <input class="edit-slider1 edit-slider green-slider" id="edit-usefulness" value="0" style="visibility:hidden;">
+                </div>
+                <hr>
+                <div class="rates-row edit-rates-row">
+                    <p>困難度</p>
+                    <label class="rsize2">請拖曳選擇</label>
+                    <div class="edit-slider2 edit-slider yellow-slider" id="slider"></div>
+                    <input class="edit-slider1 edit-slider green-slider" id="edit-difficulty" value="0" style="visibility:hidden;">                
+                    </div>
+                <hr>
+                <div class="rates-row edit-rates-row">
+                    <p>忙碌度</p>
+                    <label class="rsize3">請拖曳選擇</label>
+                    <div class="edit-slider3 edit-slider yellow-slider" id="slider"></div>
+                    <input class="edit-slider1 edit-slider green-slider" id="edit-busy" value="0" style="visibility:hidden;">                
+                    </div> 
+            </div> 
+            <textarea name="" id="content" class="form-control" cols="30" rows="10" placeholder="你可以在這裡描述更多修課心得或你的問題"></textarea>
+            <button type="button" class="btn btn-danger" id="cancel-btn">取消</button>
+            <button type="submit" class="btn btn-default">確認送出</button
+        </form>
+    </div>
 </section>
 
 <section class="container list-col-4">
@@ -182,7 +220,7 @@
                 </div>        
             </div>
         </a>
-        <a href="essay-notice.html">
+<!--         <a href="essay-notice.html">
             <div class="home-essay notice" data-type="notice">
                 <p class="essay-type notice">公告</p>
                 <h3>下周開始換教室囉!</h3>
@@ -196,7 +234,7 @@
 
                 </div>        
             </div>    
-        </a>    
+        </a>   -->  
 </section>
 
 <!-- <script src="https://code.jquery.com/jquery-2.1.1.js"></script> -->
@@ -209,38 +247,113 @@
     
 (function(){
 
+// $('.type-in').hide();
+// $('.edit-rate').hide();
 
+$('#type-btn').on('click', function(){
+    $('.type-in').slideDown();
+});
+$('#cancel-btn').on('click', function(){
+    $('.type-in').slideUp();
+});
+
+//form-control
+$('#essay-type').on('change' , function(){
+    var essayType = $('#essay-type').val();
+    console.log(essayType);
+    if (essayType == "ask") {
+        $('.edit-rate').hide();
+    } else if (essayType == "review"){
+        $('.edit-rate').show();
+    }
+});
+
+
+//這邊是總評分
     $(".flat-slider1")
         .slider({
+            min: 0,
+            max: 5,
             range: "max",
-            value: 90,
+            value: 4.5,
+            step: 0.1
 
     }).slider("disable");
 
+
     $(".flat-slider2")
         .slider({
+            min: 0,
+            max: 5,
             range: "max",
-            value: 80,
+            value: 0.5,
+            step: 0.1
 
     }).slider("disable");   
 
     $(".flat-slider3")
         .slider({ 
+            min: 0,
+            max: 5,
             range: "max",
-            value: 10,
+            value: 3.0,
+            step: 0.1
     }).slider("disable");    
+
+var rateValue1 = $('.flat-slider1').slider("option", "value"),
+    rateValue2 = $('.flat-slider2').slider("option", "value"),
+    rateValue3 = $('.flat-slider3').slider("option", "value");
+$('.rate1').text(rateValue1);
+$('.rate2').text(rateValue2);
+$('.rate3').text(rateValue3);
+
+//下面是編輯評分
+
+var score = [0, 1, 2, 3, 4, 5];
+
+var usefulness = ["" ,"好像沒學到什麼耶", "我有學到一點東西", "普普通通", "頗有用" ,"我的生命少不了這門課"];
+
+var difficulty = ["", "根本難不倒我", "稍微讀一下即可", "普普通通", "需要有點程度", "需要用生命苦讀"];
+
+var busy = ["", "閒到幾乎忘了這門課", "沒做什麼事情", "普普通通", "不是很輕鬆呢", "將會使你焦頭爛額"];
+
+    $(".edit-slider1").slider({
+        range: "max",
+        min: 0,
+        max: usefulness.length - 1,
+        step: 1,
+        slide: function(event, ui) {
+            $(".rsize1").text(score[ui.value] + usefulness[ui.value]);
+            $("#edit-usefulness").attr("value", score[ui.value]);
+        }
+    });
+
+    $(".edit-slider2").slider({
+        range: "max",
+        min: 0,
+        max: difficulty.length - 1,
+        step: 1,
+        slide: function(event, ui) {
+            $(".rsize2").text(score[ui.value] + difficulty[ui.value]);
+            $("#edit-difficulty").attr("value", score[ui.value]);
+        }
+    });
+
+    $(".edit-slider3").slider({
+        range: "max",
+        min: 0,
+        max: busy.length - 1,
+        step: 1,
+        slide: function(event, ui) {
+            $(".rsize3").text(score[ui.value] + busy[ui.value]);
+            $("#edit-busy").attr("value", score[ui.value]);
+        }
+    });
+
 
     var homeCourse = $('.home-course'),
         logoGreen = '#209e40',
         brown = '#932009';
-    // function hoverColor (childClass,color) {
-    //     $(this)
-    //         .children('h3').css('color', color)
-    //         .end()
-    //         .children('.post-time').css('color', color);  
-    // }
-
-
 
     homeCourse.on('mouseenter', function(){
         $(this)
@@ -296,6 +409,7 @@
             .children('.post-time').css('color', brown);
     });
 })();
+
 
 
 </script>
