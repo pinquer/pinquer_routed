@@ -9,6 +9,7 @@
 	    	"<p class='post-time'>"+ "發布的時間"+"</p>"+
 	    	"<p>"+ commentContent + "</p>"
 	    	).appendTo("#new .comment-content");
+	    	$('textarea').val('');
     	}
 
     });
