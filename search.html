@@ -92,73 +92,85 @@
 <button class="btn btn-success" id="business">商學院</button>
 <button class="btn btn-success" id="communication">傳播學院</button>
 <button class="btn btn-success" id="lan">外語學院</button>
+<button class="btn btn-success" id="law">法學院</button>
 <button class="btn btn-success" id="science">理學院</button>
 <div class="main-filters">
 <!-- <div class="filter" data-filter="all">Show All</div>     -->
-    <div class="filter department literal" data-filter=".101">中文系</div>
-    <div class="filter department literal" data-filter=".102">教育系</div>
-    <div class="filter department literal" data-filter=".103">歷史系</div>
-    <div class="filter department literal" data-filter=".104">哲學系</div>
-    <div class="filter department social" data-filter=".202">政治系</div>
-    <div class="filter department social" data-filter=".203">外交系</div>
-    <div class="filter department social" data-filter=".204">社會系</div>
-    <div class="filter department social" data-filter=".205">財政系</div>
-    <div class="filter department social" data-filter=".206">公行系</div>
-    <div class="filter department social" data-filter=".207">地政系</div>
-    <div class="filter department social" data-filter=".208">經濟系</div>
-    <div class="filter department social" data-filter=".209">民族系</div>
-    <div class="filter department business" data-filter=".301">國貿系</div>
-    <div class="filter department business" data-filter=".302">金融系</div>
-    <div class="filter department business" data-filter=".303">會計系</div>
-    <div class="filter department business" data-filter=".304">統計系</div>
-    <div class="filter department business" data-filter=".305">企管系</div>
-    <div class="filter department business" data-filter=".306">資管系</div>
-    <div class="filter department business" data-filter=".307">財管系</div>
-    <div class="filter department business" data-filter=".308">風管系</div>
-    <div class="filter department communication" data-filter=".401">新聞系</div>
-    <div class="filter department communication" data-filter=".402">廣告系</div>
-    <div class="filter department communication" data-filter=".403">廣電系</div>
-    <div class="filter department communication" data-filter=".404">傳播學程</div>
-    <div class="filter department communication" data-filter=".405">傳院不分系</div>
-    <div class="filter department lan" data-filter=".501">英文系</div>
-    <div class="filter department lan" data-filter=".502">阿文系</div>
-    <div class="filter department lan" data-filter=".504">斯語系</div>
-    <div class="filter department lan" data-filter=".506">日文系</div>
-    <div class="filter department lan" data-filter=".507">韓文系</div>
-    <div class="filter department lan" data-filter=".508">土文系</div>
-    <div class="filter department lan" data-filter=".5091">歐文法</div>
-    <div class="filter department lan" data-filter=".5092">歐文德</div>
-    <div class="filter department lan" data-filter=".5093">歐文西</div>
-    <div class="filter department lan" data-filter=".601">法律系</div>
-    <div class="filter department science" data-filter=".701">應數系</div>
-    <div class="filter department science" data-filter=".702">心理系</div>
-    <div class="filter department science" data-filter=".703">資科系</div>
+    <div class="filter department literal" data-title="department" data-value="101">中文系</div>
+    <div class="filter department literal" data-title="department" data-value="102">教育系</div>
+    <div class="filter department literal" data-title="department" data-value="103">歷史系</div>
+    <div class="filter department literal" data-title="department" data-value="104">哲學系</div>
+    <div class="filter department social" data-title="department" data-value="202">政治系</div>
+    <div class="filter department social" data-title="department" data-value="203">外交系</div>
+    <div class="filter department social" data-title="department" data-value="204">社會系</div>
+    <div class="filter department social" data-title="department" data-value="205">財政系</div>
+    <div class="filter department social" data-title="department" data-value="206">公行系</div>
+    <div class="filter department social" data-title="department" data-value="207">地政系</div>
+    <div class="filter department social" data-title="department" data-value="208">經濟系</div>
+    <div class="filter department social" data-title="department" data-value="209">民族系</div>
+    <div class="filter department business" data-title="department" data-value="301">國貿系</div>
+    <div class="filter department business" data-title="department" data-value="302">金融系</div>
+    <div class="filter department business" data-title="department" data-value="303">會計系</div>
+    <div class="filter department business" data-title="department" data-value="304">統計系</div>
+    <div class="filter department business" data-title="department" data-value="305">企管系</div>
+    <div class="filter department business" data-title="department" data-value="306">資管系</div>
+    <div class="filter department business" data-title="department" data-value="307">財管系</div>
+    <div class="filter department business" data-title="department" data-value="308">風管系</div>
+    <div class="filter department communication" data-title="department" data-value="401">新聞系</div>
+    <div class="filter department communication" data-title="department" data-value="402">廣告系</div>
+    <div class="filter department communication" data-title="department" data-value="403">廣電系</div>
+    <div class="filter department communication" data-title="department" data-value="404">傳播學程</div>
+    <div class="filter department communication" data-title="department" data-value="405">傳院不分系</div>
+    <div class="filter department lan" data-title="department" data-value="501">英文系</div>
+    <div class="filter department lan" data-title="department" data-value="502">阿文系</div>
+    <div class="filter department lan" data-title="department" data-value="504">斯語系</div>
+    <div class="filter department lan" data-title="department" data-value="506">日文系</div>
+    <div class="filter department lan" data-title="department" data-value="507">韓文系</div>
+    <div class="filter department lan" data-title="department" data-value="508">土文系</div>
+    <div class="filter department lan" data-title="department" data-value="5091">歐文法</div>
+    <div class="filter department lan" data-title="department" data-value="5092">歐文德</div>
+    <div class="filter department lan" data-title="department" data-value="5093">歐文西</div>
+    <div class="filter department law" data-title="department" data-value="601">法律系</div>
+    <div class="filter department science" data-title="department" data-value="701">應數系</div>
+    <div class="filter department science" data-title="department" data-value="702">心理系</div>
+    <div class="filter department science" data-title="department" data-value="703">資科系</div>
 </div>
 <h4>依通識種類瀏覽</h4>
 <div class="sub-filters">
-    <div class="filter general-course-core" data-filter=".core">核心通識</div>    
-    <div class="filter general-course-science" data-filter=".science">自然通識</div>
-    <div class="filter general-course-humanity" data-filter=".humanity">人文通識</div>
-    <div class="filter general-course-social" data-filter=".social">社會通識</div>
-    <div class="filter general-course-chinese" data-filter=".chinese">中文通識</div>
-    <div class="filter general-course-english" data-filter=".english">英文通識</div>
-    <div class="filter general-course-cross" data-filter=".cross">跨領域通識</div>
-    <div class="filter general-course-residental" data-filter=".residental">書院通識</div>
+    <div class="filter" data-title="isCore" data-value="TRUE">核心通識</div>    
+    <div class="filter" data-title="liberalArt" data-value="自然通識">自然通識</div>
+    <div class="filter" data-title="liberalArt" data-value="人文通識">人文通識</div>
+    <div class="filter" data-title="liberalArt" data-value="社會通識">社會通識</div>
+    <div class="filter" data-title="liberalArt" data-value="中文通識">中文通識</div>
+    <div class="filter" data-title="liberalArt" data-value="英文通識">英文通識</div>
+    <div class="filter" data-title="liberalArt" data-value="跨領域通識">跨領域通識</div>
+    <div class="filter" data-title="liberalArt" data-value="書院通識">書院通識</div>
 </div>
 <h4>其他類別</h4>
 <div class="sub-filters">
-    <div class="filter general-course-military" data-filter=".military">軍訓</div>
-    <div class="filter general-course-PE" data-filter=".PE">體育</div>
-    <div class="filter general-course-service" data-filter=".service">服務學習課程</div>
-
+    <div class="filter" data-title="note" data-value="軍訓">軍訓</div>
+    <div class="filter" data-title="note" data-value="體育">體育</div>
+    <div class="filter" data-title="department" data-value="050">服務學習課程</div>
 </div>
 
+
+<form action="" id="filter-form">
+<label class="filter" for="mon">星期一</label><input id="mon" type="checkbox" name="星期" value="一">
+<label class="filter" for="tue">星期二</label><input id="tue" type="checkbox" name="星期" value="二">
+<label class="filter" for="wed">星期三</label><input id="wed" type="checkbox" name="星期" value="三">
+<label class="filter" for="thu">星期四</label><input id="thu" type="checkbox" name="星期" value="四">
+<label class="filter" for="fri">星期五</label><input id="fri" type="checkbox" name="星期" value="五">
+
+    <input type="text" name="" hidden id="filter-unit" value>
+    <input type="text" name="" class="form-control"  id="filter-text" placeholder="這裡可以輸入你想找的課名關鍵字">
+
+</form>
 
 
 
 
 <div class="list-col-4 row" id="Container">
-        <a class="mix 101 home-course" href="/course/認識星空_by_孫維新">
+        <a class="home-course" href="/course/認識星空_by_孫維新">
             <div class=" ">
                 <h3>中文系的課</h3>
                 <hr>
@@ -170,98 +182,7 @@
                     </p>           
                 </div>
             </div>            
-        </a>
-        <a class="mix 102 home-course" href="/course/認識星空_by_孫維新">
-            <div class=" ">
-                <h3>教育系的課</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>
-        <a class="mix 103 home-course" href="/course/認識星空_by_孫維新">
-            <div class="">
-                <h3>歷史系的課</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>
-        <a class="mix 104 home-course" href="/course/認識星空_by_孫維新">
-            <div class="">
-                <h3>哲學系的課</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>
-        <a class="mix core science home-course" href="/course/認識星空_by_孫維新">
-            <div class="">
-                <h3>自然核心</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>
-        <a class="mix core social home-course" href="/course/認識星空_by_孫維新">
-            <div class="">
-                <h3>社會核心</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>
-        <a class="mix core humanity home-course" href="/course/認識星空_by_孫維新">
-            <div class="">
-                <h3>人文核心</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>
-        <a class="mix humanity home-course" href="/course/認識星空_by_孫維新">
-            <div class="">
-                <h3>人文通識</h3>
-                <hr>
-                <p class="prof">孫維新</p>
-                <div class="bottom">
-                    <p>
-                    <span class="open-throu">自然通識</span>
-                    <span class="post-num">19則貼文</span> 
-                    </p>           
-                </div>
-            </div>            
-        </a>                
+        </a>     
 
 </div>
 
@@ -270,13 +191,13 @@
 
 <script src="javascripts/jquery-1.11.3.min.js"></script>
 <script src="javascripts/jquery-ui.min.js"></script>
-<script src="javascripts/jquery.mixitup.min.js"></script>
+<!-- <script src="javascripts/jquery.mixitup.min.js"></script> -->
 <script src="javascripts/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(function(){
 
     // Instantiate MixItUp:
-    $('#Container').mixItUp();
+    // $('#Container').mixItUp();
 
     $('.filter.department').hide();
     $('button').on('click', function(){
@@ -285,6 +206,24 @@ $(function(){
             // console.log(school);
         $('.filter.department').hide();
         department.fadeToggle();
+    });
+
+    $('.filter').on('click', function(){
+        var filterTitle = $(this).data('title'),
+            filterValue = $(this).data('value');
+
+        $('#filter-unit').attr('name', filterTitle);
+        $('#filter-unit').attr('value', filterValue);
+        console.log($('#filter-unit').attr('name') + ',' + $('#filter-unit').attr('value'));
+        $('#filter-form').submit( function(e){
+            e.preventDefault();
+        });
+    });
+    $('input').on('change', function(){
+        // console.log('something changed');
+        $('#filter-form').submit( function(e){
+            e.preventDefault();
+        });
     });
 });
 
