@@ -5,8 +5,11 @@
 .cardstyle {
   background-color: white;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 5px 0 #A1A1A1;
-  box-shadow: 0 0 5px 0 #A1A1A1; }
+  -webkit-box-shadow: 0 0 2px 0 #A1A1A1;
+  box-shadow: 0 0 2px 0 #A1A1A1; }
+  .cardstyle:hover {
+    -webkit-box-shadow: 0 0 10px 0 #A1A1A1;
+    box-shadow: 0 0 10px 0 #A1A1A1; }
 
 body {
   font-family: "Helvetica Neue","Microsoft Yahei",sans-serif,serif;
@@ -60,9 +63,7 @@ nav .container {
     float: left;
     background-color: white;
     border-radius: 6px;
-    padding: 0;
-    -webkit-box-shadow: 0 0 5px 0 #A1A1A1;
-    box-shadow: 0 0 5px 0 #A1A1A1; }
+    padding: 0; }
     .list-col-4 .home-course h3,
     .list-col-4 .home-essay h3 {
       width: 100%;
@@ -121,8 +122,6 @@ nav .container {
     background-color: #107B5D; }
   .list-col-4 .home-essay .ask {
     background-color: #f0542a; }
-  .list-col-4 .home-essay .notice {
-    background-color: #f3ae1e; }
 
 #footerDomain {
   position: relative;

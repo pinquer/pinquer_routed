@@ -28,8 +28,12 @@ $brown: #932009;
 .cardstyle {
 	background-color: white;
 	border-radius: 10px;
-	-webkit-box-shadow: 0 0 5px 0 #A1A1A1;
-	box-shadow: 0 0 5px 0 #A1A1A1;
+	-webkit-box-shadow: 0 0 2px 0 #A1A1A1;
+	box-shadow: 0 0 2px 0 #A1A1A1;
+	&:hover {
+		-webkit-box-shadow: 0 0 10px 0 #A1A1A1;
+		box-shadow: 0 0 10px 0 #A1A1A1;
+	}
 }
 
 body {
@@ -92,8 +96,8 @@ nav .container {
 		background-color: white;	
 		border-radius: 6px;
 		padding: 0;
-		-webkit-box-shadow: 0 0 5px 0 #A1A1A1;
-		box-shadow: 0 0 5px 0 #A1A1A1;
+		// -webkit-box-shadow: 0 0 5px 0 #A1A1A1;
+		// box-shadow: 0 0 5px 0 #A1A1A1;
 		h3 {
 			width: 100%;
 			text-align: left;
@@ -155,9 +159,6 @@ nav .container {
 		}
 		.ask {
 			background-color: $essayOrg;
-		}
-		.notice {
-			background-color: $essayYellow;
 		}
 	}
 }

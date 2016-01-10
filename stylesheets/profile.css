@@ -173,84 +173,150 @@ nav .container {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left; } }
-#course .course-card {
-  width: 45%;
-  margin-left: 3.33333%;
-  margin-bottom: 10%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  margin-bottom: 0;
-  border-bottom: #ededed 2px solid;
-  min-height: 190px;
-  padding: 10px 20px; }
-#course .course-info h3 {
-  color: #209e40;
-  font-weight: bold;
+.essay-list {
   margin: 0;
-  padding: 20px 0 0 5px; }
-
-table {
-  margin: 30px 0 10px 0; }
-  table tr > th {
-    color: #a3a3a3;
-    font-weight: normal; }
-  table tr > td {
-    color: #209e40; }
-
-.course-rating hr {
-  margin: 0;
-  padding: 0;
-  border-top: 1.5px solid #f4f4f4; }
-
-.rates-row {
-  margin: 10px 0 10px 0; }
-  .rates-row p {
-    display: inline-block;
+  width: 65%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px; }
+  .essay-list > h3 {
+    padding-top: 5px;
+    text-align: center; }
+  .essay-list > hr {
+    padding: 0;
     margin: 0;
-    text-align: center;
-    vertical-align: middle; }
-    .rates-row p:first-child {
-      border-radius: 5px;
-      border: 2px solid #209e40;
-      width: 20%;
-      padding: 5px;
-      color: #209e40;
-      font-weight: bold;
-      letter-spacing: 2px; }
-    .rates-row p:nth-child(2) {
-      width: 10%;
-      font-size: 1.4em;
-      font-weight: bold; }
-  .rates-row #slider {
-    width: 65%;
-    display: inline-block;
-    vertical-align: middle; }
+    border-top: 1px solid #E5E5E5; }
 
-.edit-rates-row label {
-  width: 10%; }
-
-.feedback .score {
-  font-size: 14px;
-  color: #209e40;
-  margin-top: 20px;
+.notice {
+  margin: 0 0 0 5%;
   width: 30%;
-  display: inline-block; }
-.feedback .score-title {
-  border-radius: 5px;
-  border: 2px solid #209e40;
-  padding: 2px; }
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px; }
+  .notice > h3 {
+    padding-top: 5px;
+    text-align: center; }
+  .notice > hr {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #E5E5E5; }
+  .notice .scroll {
+    max-height: 400px;
+    overflow: scroll; }
+  .notice a:hover {
+    text-decoration: none; }
+  .notice a .reply {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    color: black; }
+    .notice a .reply .userName,
+    .notice a .reply .essayTitle {
+      color: #209e40;
+      font-weight: bold; }
 
-@media (max-width: 996px) {
-  #course .course-card {
+.list-col-3 {
+  text-align: center;
+  width: 100%;
+  margin: 20px auto; }
+  .list-col-3 h2 {
+    color: #209e40;
+    width: 100%;
+    display: inline-block; }
+  .list-col-3 .home-course,
+  .list-col-3 .home-essay {
+    width: 30%;
+    margin-left: 2.5%;
+    margin-bottom: 7.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    background-color: white;
+    border-radius: 6px;
+    padding: 0; }
+    .list-col-3 .home-course h3,
+    .list-col-3 .home-essay h3 {
+      width: 100%;
+      text-align: left;
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #932009;
+      letter-spacing: 2px;
+      padding-left: 20px;
+      margin: 20px 0 15px 0; }
+    .list-col-3 .home-course hr,
+    .list-col-3 .home-essay hr {
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #E5E5E5; }
+    .list-col-3 .home-course .prof,
+    .list-col-3 .home-course .post-time,
+    .list-col-3 .home-essay .prof,
+    .list-col-3 .home-essay .post-time {
+      width: 80%;
+      text-align: left;
+      font-size: 1.3rem;
+      padding-top: 10px;
+      padding-left: 20px;
+      color: #932009; }
+    .list-col-3 .home-course .bottom,
+    .list-col-3 .home-essay .bottom {
+      background-color: #209e40;
+      width: 100%;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      color: white;
+      font-size: 1.3rem;
+      margin-top: 60%;
+      padding-top: 4%;
+      padding-bottom: 4%; }
+      .list-col-3 .home-course .bottom p,
+      .list-col-3 .home-essay .bottom p {
+        margin: 0px 20px;
+        text-align: left; }
+        .list-col-3 .home-course .bottom p .post-num,
+        .list-col-3 .home-course .bottom p .review-num,
+        .list-col-3 .home-essay .bottom p .post-num,
+        .list-col-3 .home-essay .bottom p .review-num {
+          margin-left: 3%; }
+  .list-col-3 .home-essay .essay-type {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 1.3rem;
+    background-color: #e9e9e9; }
+  .list-col-3 .home-essay .feedback {
+    background-color: #107B5D; }
+  .list-col-3 .home-essay .ask {
+    background-color: #f0542a; }
+
+@media (max-width: 1200px) {
+  .essay-list,
+  .notice {
+    width: 100%;
+    margin: 0;
+    padding-top: 10px; } }
+@media (max-width: 960px) {
+  .list-col-3 .home-course,
+  .list-col-3 .home-essay {
+    width: 45%;
+    margin-left: 3.33333%;
+    margin-bottom: 10%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; } }
+@media (max-width: 640px) {
+  .list-col-3 .home-course,
+  .list-col-3 .home-essay {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 15%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    float: left;
-    margin-bottom: 5%; } }
+    float: left; } }
 
-/*# sourceMappingURL=course.css.map */
+/*# sourceMappingURL=profile.css.map */

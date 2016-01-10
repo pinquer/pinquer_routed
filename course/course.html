@@ -202,7 +202,7 @@
             <% } %>
             <% if (essay.type == "ask") { %>
                 <a href="/essay-ask?essayId=<%= essay._id %>">
-                <div class="home-essay ask" data-type="ask">
+                <div class="home-essay ask cardstyle" data-type="ask">
                     <p class="essay-type ask">提問</p>
                     <h3><%= essay.title %></h3>
                     <hr>
@@ -218,7 +218,7 @@
                 </a>    
             <% } if (essay.type == "review") { %>
                 <a href="/essay-review?essayId=<%= essay._id %>">
-                <div class="home-essay feedback" data-type="feedback">
+                <div class="home-essay feedback cardstyle" data-type="feedback">
                     <p class="essay-type feedback">心得</p>
                     <h3> <%= essay.title %></h3>
                     <hr>
