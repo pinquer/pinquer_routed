@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="Shortcut Icon" type="image/x-icon" href="images/shortcut_icon.png" />
+    <link rel="Shortcut Icon" type="image/x-icon" href="../images/shortcut_icon.png" />
     <title>Pinquer 評課部落</title>
     <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css"> -->
-    <link rel="stylesheet" href="stylesheets/jquery-ui-1.10.4.slider.css">    
-    <link rel="stylesheet" href="stylesheets/slider-pips.css">
+    <link rel="stylesheet" href="../stylesheets/jquery-ui-1.10.4.slider.css">    
+    <link rel="stylesheet" href="../stylesheets/slider-pips.css">
     <!-- Bootstrap Core CSS -->
-    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="../stylesheets/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="stylesheets/essay.css" rel="stylesheet">
+    <link href="../stylesheets/essay.css" rel="stylesheet">
 </head>
 
 
@@ -35,21 +35,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="/"><img src="images/pinquer_logo.png" alt=""></a>
+                <a class="navbar-brand page-scroll" href="/"><img src="../images/pinquer_logo.png" alt=""></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
                   <li>
-                    <a href="#" class="page-scroll">瀏覽課程</a>
+                    <a href="" class="page-scroll">瀏覽課程</a>
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <% if(!loggedIn) { %>
+                     <% if(!loggedIn) { %>
                     <li>
                         <a class="page-scroll" href="/login">登入註冊</a>
                     </li>
@@ -79,9 +79,9 @@
 
 <div class="site-map">
     <a href="/">首頁</a>>
-    <a href="#">瀏覽課程</a>>
+    <a href="">瀏覽課程</a>>
     <a href="/course/<%= essay.about %>">認識星空</a>>
-    <a href="#">基本上這是一篇反推文</a>
+    <a href="">想請問...?</a>
 </div>
 
 <section class="container" id="course">
@@ -103,23 +103,6 @@
                 <td>一56</td>
             </tr>
             </table>
-        </div>
-        <div class="user-rating cardstyle userrate-card">
-            <p class="title">作者評分</p>
-            <div class="rates-col">
-                <p>實用性</p>
-                <p>4.8</p>
-            </div>
-            <!-- <hr> -->
-            <div class="rates-col">
-                <p>困難度</p>
-                <p>2.5</p>
-            </div>
-            <!-- <hr> -->
-            <div class="rates-col">
-                <p>忙碌度</p>
-                <p>3.5</p>
-            </div> 
         </div>
         <div class="course-rating cardstyle course-card">
             <p class="title">網站總評</p>
@@ -150,35 +133,25 @@
         <div class="article cardstyle">
             <h4 class="article-title"><%= essay.title %></h4>
             <hr>
-            <p>類別：心得</p>
+            <p>類別：提問</p>
             <p>發布於：Jul/06/2014<p>
-            <img src="images/photo.png" alt="">
+            <img src="../images/photo.png" alt="">
             <p>作者：<%= essay.by %></p>
-            <p> <%= essay.content %> </p>
-            <!--<p>看過貓空選課版的人就會知道，這個老師特色是上課幽默風趣，人氣爆表，
-    知識淵博，名稱是《認識星空》，卻夾雜了人生的智慧歷練，是一門政大必修的課－－
-    但如果你想選，請先考慮下面幾件事：
-    （一）黑暗陷阱之一，人潮
-    這門課經由各屆學長姐傳下來，孫教授的形象在選課板根本經過造神化了，
-    因此修這門課的人非　常　多。
-    五六節是兩點上課，一般來說大家吃個便當之後大概一點半開始前往教室，
-    但這門課一點半沒有位子，更扯的是一點十分來還是沒有位子，
-    一點呢？只剩下少數前排的搖滾區，後面還是沒有位子。
-    最後我只能一下課就去藝中吃午餐，吃完後十二點半，
-    跟「大批人潮」痴痴坐在舜文講堂前，等著門開。
-    每一次上課都是一次戰鬥，還有人用糟糕的黑暗兵法，
-    一進教室就開始灑他的鉛筆盒文具和文件，把兩三排位子收割走；</p>-->
-        
+            <p><%= essay.content %></p>
+            <button class="btn btn-default">我也想知道</button>
         </div>
         <p class="comment-seperate">留言區</p>  
         <div class="comment">
             <div class="typein only-shadow">
-                <img src="images/photo.png" alt="">
-                <textarea></textarea>
-                <button type="submit" class="btn btn-default" id="comment">留言</button>   
+                <form action=""> <!-- 留言版 -->
+                    <img src="../images/photo.png" alt="">
+                    <textarea id="ta"></textarea>
+                    <button type="submit" class="btn btn-default">留言</button>
+                    <!-- id="comment" -->  
+                </form> 
             </div>
-            <div class="past-comment only-shadow">
-                <img src="images/photo.png" alt="">
+            <div class="past-comment only-shadow" id="right-answer">
+                <img src="../images/photo.png" alt="">
                 <div class="comment-content">
                     <p class="user-name">我是同學A</p>
                     <p class="post-time">Dec/10/2015</p>
@@ -186,7 +159,7 @@
                 </div>
             </div>
             <div class="past-comment only-shadow">
-                <img src="images/photo.png" alt="">
+                <img src="../images/photo.png" alt="">
                 <div class="comment-content">
                     <p class="user-name">我是同學B</p>
                     <p class="post-time">Dec/10/2015</p>
@@ -213,23 +186,6 @@
                 <td>一56</td>
             </tr>
             </table>
-        </div>
-        <div class="user-rating cardstyle userrate-card">
-            <p class="title">作者評分</p>
-            <div class="rates-col">
-                <p>實用性</p>
-                <p>4.8</p>
-            </div>
-            <!-- <hr> -->
-            <div class="rates-col">
-                <p>困難度</p>
-                <p>2.5</p>
-            </div>
-            <!-- <hr> -->
-            <div class="rates-col">
-                <p>忙碌度</p>
-                <p>3.5</p>
-            </div> 
         </div>
         <div class="course-rating cardstyle course-card">
             <p class="title">網站總評</p>
@@ -261,15 +217,52 @@
 </section>
 
 
-<script src="javascripts/jquery-1.11.3.min.js"></script>
-<script src="javascripts/jquery-ui.min.js"></script>
-<script src="javascripts/comment.js"></script>
-<script src="javascripts/bootstrap.min.js"></script>
-<script type="text/javascript">
-    
-(function(){
+<!-- <script src="https://code.jquery.com/jquery-2.1.1.js"></script> -->
+<!-- <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script> -->
+<% if(loggedIn) { %>
+<textarea id="passUsername"  hidden><%= currentUser.nickname %></textarea>
+<% } %>
+<textarea id="passEssayId" hidden><%= essay._id %></textarea>
+<script src="../javascripts/socket.io.js"></script>
 
-    $(".flat-slider1")
+<script src="../javascripts/jquery-1.11.3.min.js"></script>
+<script src="../javascripts/jquery-ui.min.js"></script>
+<script src="../javascripts/slider-pips.js"></script>
+<script src="../javascripts/comment.js"></script>
+<script src="../javascripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var socket = io();
+    var currentEssay = $('#passEssayId').val();
+    
+    $('form').submit(function() {
+            var usr = $('#passUsername').val();
+            
+            socket.emit( 'serverGetComment', usr, $('#ta').val(), currentEssay);
+
+            $('#ta').val('');
+            return false;
+    });
+    socket.on('serverBroadcastComment', function(usr, msg, essayId, date) {
+            if (essayId == currentEssay) {
+
+                // 在這邊新增發言
+                // 
+                // 可用的變數： usr  就是使用者的nickname
+                //            msg  就是使用者的 
+                //            date 就是他按輸入的時間 （但沒處理過，是utc8的形式）
+                //var displayTxt= usr + " : " + msg;
+                //$('#display').append($('<li>').text(displayTxt));
+                // 上面這裡是對「 id為display <ul> 」 增加一個 <li> (我之前做的)
+
+
+            }
+    });
+
+
+
+
+(function(){
+$(".flat-slider1")
         .slider({
             min: 0,
             max: 5,
@@ -377,7 +370,7 @@ $('.rate3').text(rateValue3);
     
 <footer id="footerDomain">
     <div class="bottom-info">
-    <img src="images/logo_white.png" alt="">
+    <img src="../images/logo_white.png" alt="">
       <p>COPYRIGHT © ALL RIGHTS RESERVED.</p>
     </div>
 </footer>
