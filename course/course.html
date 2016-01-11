@@ -130,11 +130,11 @@
 </section>
 
 <section class="container" id="post">
-    <% if(loggedIn) { %>
+<!--     <% if(loggedIn) { %>
         <button type="button" class="btn btn-success" id="type-btn">發表心得、提問</button>
-    <% } else {  %>
-        <a href="/login" id="login"><button type="button" class="btn btn-success">發文前請先登入</button></a>
-    <% } %>
+    <% } else {  %> -->
+        <a href="/login" id="login"><button type="button" class="btn btn-success">發表心得、提問</button></a>
+    <!--<% } %> -->
     <div class="type-in row only-shadow">
         <form action="" method="post">
             <div class="type col-lg-3">
@@ -299,16 +299,13 @@
 
 //發文區滑鼠偵測
 $('.type-in').hide();
-$('#login').hide();
 
-$('#type-btn').on('mouseover', function(){
-    $(this).hide();
-    $('#login').show();
+$('#login').on('mouseover', function(){
+    $('#login').find('button').text("發文前請先登入");
 });
 
 $('#login').on('mouseleave', function(){
-    $(this).hide();
-    $('#type-btn').show();
+    $('#login').find('button').text("發表心得、提問");
 });
 
 //點擊發文滑出編輯區塊
