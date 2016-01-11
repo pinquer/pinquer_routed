@@ -69,8 +69,43 @@ table {
 	}
 }
 
-.edit-rates-row label{
-	width: 10%;
+#login>button, #type-btn {
+	margin:20px 0px;
+	width: 15%;
+}
+
+.type-in {
+	// border: 2px $logoGreen solid;
+	background-color: white;
+	border-radius:5px;
+	padding:20px;
+}
+
+.edit-rates-row.rates-row {
+	padding: 10px 20px;
+	* {
+		vertical-align:middle;		
+	}
+	input {
+		display: none;
+	}
+	p {
+	}
+	label {
+		width: 20%;
+		text-align: center;
+	}
+	#slider {
+		width: 55%;	
+	}
+}
+
+
+.edit-rate,
+select,
+input#title,
+textarea {
+	margin-bottom: 20px;
 }
 
 .feedback {
@@ -82,7 +117,6 @@ table {
 		display:inline-block;
 	}
 	.score-title {
-		// width: 50%;
 		border-radius:5px;
 		border: 2px solid $logoGreen;
 		padding:2px;

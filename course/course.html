@@ -18,23 +18,6 @@
 
     <!-- Custom CSS -->
     <link href="../stylesheets/course.css" rel="stylesheet">
-    
-
-    <!-- Custom Fonts -->
-    
-    <!-- Custom Fonts -->
-    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'> -->
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.javascripts/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 
@@ -152,40 +135,51 @@
     <% } else {  %>
         <a href="/login" id="login"><button type="button" class="btn btn-success">發文前請先登入</button></a>
     <% } %>
-    <div class="type-in">
+    <div class="type-in row only-shadow">
         <form action="" method="post">
-            <label for="essay-type">選擇文章類型</label>
-            <select name="type" id="essay-type" class="form-control" >
-                 <option value="review">我要發表心得</option>
-                 <option value="ask">我要提問</option>
-            </select>
-            <label for="title">標題</label><input type="text" class="form-control" id="title" placeholder="請輸入標題" name="title">
-            <label for="edit-rate" class="edit-rate">留下你對這門的評分</label>
-            <div class="course-rating edit-rate cardstyle col-lg-12 col-md-12 col-sm-12">
-                <div class="rates-row edit-rates-row">
-                    <p>實用性</p>
-                    <label class="rsize1">請拖曳選擇</label>
-                    <div class="edit-slider1 edit-slider green-slider" id="slider"></div>
-                    <input class="edit-slider1 edit-slider green-slider" id="edit-usefulness" value="" style="visibility:hidden;" name="usefulness">
-                </div>
-                <hr>
-                <div class="rates-row edit-rates-row">
-                    <p>困難度</p>
-                    <label class="rsize2">請拖曳選擇</label>
-                    <div class="edit-slider2 edit-slider yellow-slider" id="slider"></div>
-                    <input class="edit-slider1 edit-slider green-slider" id="edit-difficulty" value="" style="visibility:hidden;" name="difficulty">                
+            <div class="type col-lg-3">
+                <label for="essay-type">選擇文章類型</label>
+                <select name="type" id="essay-type" class="form-control" >
+                     <option value="review">我要發表心得</option>
+                     <option value="ask">我要提問</option>
+                </select>                
+            </div>
+            <div class="title col-lg-9">
+                <label for="title">標題</label><input type="text" class="form-control" id="title" placeholder="請輸入標題" name="title">                
+            </div>
+            <div class="rater-section col-lg-12">
+                <label for="edit-rate" class="edit-rate">留下你對這門的評分</label>
+                <div class="course-rating edit-rate cardstyle col-lg-12 col-md-12 col-sm-12">
+                    <div class="rates-row edit-rates-row">
+                        <p>實用性</p>
+                        <label class="rsize1">請拖曳選擇</label>
+                        <div class="edit-slider1 edit-slider green-slider" id="slider"></div>
+                        <input class="edit-slider1 edit-slider green-slider" id="edit-usefulness" value="" style="visibility:hidden;" name="usefulness">
                     </div>
-                <hr>
-                <div class="rates-row edit-rates-row">
-                    <p>工作量</p>
-                    <label class="rsize3">請拖曳選擇</label>
-                    <div class="edit-slider3 edit-slider yellow-slider" id="slider"></div>
-                    <input class="edit-slider1 edit-slider green-slider" id="edit-busy" value="" style="visibility:hidden;" name="workload">                
-                    </div> 
-            </div> 
-            <textarea name="content" id="content" class="form-control" cols="30" rows="10" placeholder="你可以在這裡描述更多修課心得或你的問題"></textarea>
-            <button type="button" class="btn btn-danger" id="cancel-btn">取消</button>
-            <button type="submit" class="btn btn-default">確認送出</button
+                    <hr>
+                    <div class="rates-row edit-rates-row">
+                        <p>困難度</p>
+                        <label class="rsize2">請拖曳選擇</label>
+                        <div class="edit-slider2 edit-slider yellow-slider" id="slider"></div>
+                        <input class="edit-slider1 edit-slider green-slider" id="edit-difficulty" value="" style="visibility:hidden;" name="difficulty">                
+                    </div>
+                    <hr>
+                    <div class="rates-row edit-rates-row">
+                        <p>工作量</p>
+                        <label class="rsize3">請拖曳選擇</label>
+                        <div class="edit-slider3 edit-slider yellow-slider" id="slider"></div>
+                        <input class="edit-slider1 edit-slider green-slider" id="edit-busy" value="" style="visibility:hidden;" name="workload">                
+                        </div> 
+                </div>                 
+            </div>
+            <div class="text col-lg-12">
+                <textarea name="content" id="content" class="form-control" cols="30" rows="5" placeholder="你可以在這裡描述更多修課心得或你的問題"></textarea>                
+            </div>
+            <div class="button col-lg-offset-10 col-lg-2">
+                <button type="button" class="btn btn-danger" id="cancel-btn">取消</button>
+                <button type="submit" class="btn btn-default">確認送出</button                
+            </div>
+
         </form>
     </div>
 </section>
@@ -295,30 +289,29 @@
         </a>   -->  
 </section>
 
-<!-- <script src="https://code.jquery.com/jquery-2.1.1.js"></script> -->
-<!-- <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script> -->
 <script src="../javascripts/jquery-1.11.3.min.js"></script>
 <script src="../javascripts/jquery-ui.min.js"></script>
-<script src="../javascripts/slider-pips.js"></script>
 <script src="../javascripts/bootstrap.min.js"></script>
 <script type="text/javascript">
     
 (function(){
 
+
+//發文區滑鼠偵測
 $('.type-in').hide();
-// $('.edit-rate').hide();
 $('#login').hide();
 
 $('#type-btn').on('mouseover', function(){
     $(this).hide();
     $('#login').show();
 });
+
 $('#login').on('mouseleave', function(){
     $(this).hide();
     $('#type-btn').show();
 });
 
-
+//點擊發文滑出編輯區塊
 $('#type-btn').on('click', function(){
     $('.type-in').slideDown();
 });

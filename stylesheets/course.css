@@ -97,7 +97,7 @@ nav .container {
       border-bottom-left-radius: 5px;
       color: white;
       font-size: 1.3rem;
-      margin-top: 60%;
+      margin-top: 100px;
       padding-top: 4%;
       padding-bottom: 4%; }
       .list-col-4 .home-course .bottom p,
@@ -109,6 +109,9 @@ nav .container {
         .list-col-4 .home-essay .bottom p .post-num,
         .list-col-4 .home-essay .bottom p .review-num {
           margin-left: 3%; }
+    .list-col-4 .home-course .bottom.feedback,
+    .list-col-4 .home-essay .bottom.feedback {
+      margin-top: 50px; }
   .list-col-4 .home-essay .essay-type {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -228,8 +231,32 @@ table {
     display: inline-block;
     vertical-align: middle; }
 
-.edit-rates-row label {
-  width: 10%; }
+#login, #type-btn {
+  margin: 20px 0px;
+  width: 15%; }
+
+.type-in {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px; }
+
+.edit-rates-row.rates-row {
+  padding: 10px 20px; }
+  .edit-rates-row.rates-row * {
+    vertical-align: middle; }
+  .edit-rates-row.rates-row input {
+    display: none; }
+  .edit-rates-row.rates-row label {
+    width: 20%;
+    text-align: center; }
+  .edit-rates-row.rates-row #slider {
+    width: 55%; }
+
+.edit-rate,
+select,
+input#title,
+textarea {
+  margin-bottom: 20px; }
 
 .feedback .score {
   font-size: 14px;

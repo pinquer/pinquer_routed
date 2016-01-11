@@ -153,7 +153,6 @@
     <div class="filter" data-title="department" data-value="050">服務學習課程</div>
 </div>
 
-
 <form action="" id="filter-form">
 <label class="filter" for="mon">星期一</label><input id="mon" type="checkbox" name="星期" value="一">
 <label class="filter" for="tue">星期二</label><input id="tue" type="checkbox" name="星期" value="二">
@@ -163,7 +162,7 @@
 
     <input type="text" name="" hidden id="filter-unit" value>
     <input type="text" name="" class="form-control"  id="filter-text" placeholder="這裡可以輸入你想找的課名關鍵字">
-
+    <input type="submit"  value="submit">
 </form>
 
 
@@ -215,15 +214,15 @@ $(function(){
         $('#filter-unit').attr('name', filterTitle);
         $('#filter-unit').attr('value', filterValue);
         console.log($('#filter-unit').attr('name') + ',' + $('#filter-unit').attr('value'));
+        // $('#filter-form').submit();
         $('#filter-form').submit( function(e){
+            console.log("123");
             e.preventDefault();
         });
     });
+
     $('input').on('change', function(){
-        // console.log('something changed');
-        $('#filter-form').submit( function(e){
-            e.preventDefault();
-        });
+        // $('#filter-form').submit();
     });
 });
 
