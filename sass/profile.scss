@@ -1,5 +1,27 @@
 @import "_constants.scss";
 
+
+.nickname {
+	width: 50%;
+	margin: 20px auto; 
+	text-align:center;
+	#changeNickname {
+		display: inline-block;
+	}
+	#formChange {
+		margin-top: 10px;
+	}
+	#newNickname {
+		width: 50%;
+		display: inline-block;
+	}
+	#submit {
+		margin-left: 5px;
+		display: inline-block;
+	}
+}
+
+
 .essay-list {
 	margin: 0;
 	width: 65%;

@@ -97,7 +97,7 @@ nav .container {
       border-bottom-left-radius: 5px;
       color: white;
       font-size: 1.3rem;
-      margin-top: 60%;
+      margin-top: 100px;
       padding-top: 4%;
       padding-bottom: 4%; }
       .list-col-4 .home-course .bottom p,
@@ -109,6 +109,9 @@ nav .container {
         .list-col-4 .home-essay .bottom p .post-num,
         .list-col-4 .home-essay .bottom p .review-num {
           margin-left: 3%; }
+    .list-col-4 .home-course .bottom.feedback,
+    .list-col-4 .home-essay .bottom.feedback {
+      margin-top: 50px; }
   .list-col-4 .home-essay .essay-type {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -173,6 +176,21 @@ nav .container {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left; } }
+.nickname {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center; }
+  .nickname #changeNickname {
+    display: inline-block; }
+  .nickname #formChange {
+    margin-top: 10px; }
+  .nickname #newNickname {
+    width: 50%;
+    display: inline-block; }
+  .nickname #submit {
+    margin-left: 5px;
+    display: inline-block; }
+
 .essay-list {
   margin: 0;
   width: 65%;

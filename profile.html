@@ -18,7 +18,13 @@
 
     <!-- Custom CSS -->
     <link href="stylesheets/profile.css" rel="stylesheet">
-
+<style>
+    .error {
+        text-align: left;
+        font-size: 14px;
+        color: #a94442;
+    }
+</style>
 </head>
 
 
@@ -87,6 +93,16 @@
 </div>
 
 <section class="container">
+    <div class="nickname" id="inforight">
+        哈囉！你目前的暱稱為：<span id="currentName">100305067</span>
+        <button class="btn btn-default" id="changeNickname">更改暱稱</button>
+        <div class="form-group" id="nickname-form">
+            <form method="post" id="formChange">
+                <input type="text" id="newNickname" class="form-control required" name="newNickname" placeholder="輸入新暱稱">
+                <button type="submit" id="submit" class="btn btn-primary">確認送出</button>
+            </form>
+        </div>
+    </div>
     <div class="row">
         <section class="essay-list col-lg-9 only-shadow">
             <h3>你曾發表的文章列表</h3>    
@@ -190,13 +206,145 @@
  
 </section>
 
-
 <script src="javascripts/jquery-1.11.3.min.js"></script>
 <script src="javascripts/jquery-ui.min.js"></script>
 <script src="javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
 <script type="text/javascript">
     
-(function(){
+$(document).ready(function(){
+// 暱稱欄位
+var changeBtn = $('#changeNickname'),
+    inforight = $('#inforight'),
+    didAdd = false;
+
+$('#nickname-form').hide();
+changeBtn.on('click', function() {
+    $('#nickname-form').slideToggle();
+
+    if (didAdd) {
+        // inforight.find('input').remove();
+        // inforight.find('#submit').remove();
+        // inforight.find('#nickname-form').remove();
+        changeBtn.text('更改暱稱');
+    } else {
+        // $('<div>').attr( {class:'form-group', id:'nickname-form'}).appendTo('.nickname');
+        // $('<form>').attr( {method: 'post', id: 'formChange'}).appendTo("#nickname-form");
+        // $('<input>').attr({ type: 'text', id: 'newNickname', class :'form-control required', name: 'newNickname', placeholder:'輸入新暱稱'}).appendTo('#formChange');
+        // $('<button>').attr({ type:'submit', id: 'submit', class:'btn btn-primary'}).text('確認送出').appendTo('#formChange');
+        changeBtn.text('取消');
+    }
+    didAdd = !didAdd;
+});
+
+// 判定新暱稱
+$("#formChange").validate({
+    submitHandler: function(form) {
+        form.submit();
+    },
+    errorPlacement: function(error, element) {
+        element.closest('#nickname-form').removeClass('has-success');
+        element.closest('#nickname-form').addClass('has-error');
+        element.closest('input').after(error);
+    },
+    success: function(element) {
+        element.closest('#nickname-form').removeClass('has-error');
+        element.closest('#nickname-form').addClass('has-success');
+    },
+    rules: {
+        newNickname: {
+            checkname: true,
+            required: true
+        }
+    }
+});  
+
+$.extend($.validator.messages, {
+    required: "此欄位必填.",
+});
+
+jQuery.validator.addMethod("checkname", function( value, element ) {
+    var str = value;
+    var result = false;
+ 
+    if(str.length > 0){
+        //先測試是否有中文
+        var pattCH = /[\u4e00-\u9fa5]{1,}/;
+        result1 = pattCH.test(str);
+        //先測試是否有英文
+        var pattEN = /[a-zA-Z]{1,}/;
+        result2 = pattEN.test(str);
+        //檢查先生小姐
+        testa = str.search("先生");
+        testb = str.search("小姐");
+ 
+        //整段內容只接受 (英文或中文)或空白、dash、underline
+        var pattSimbo = /^[\u4e00-\u9fa5a-zA-Z\-_\s]{1,}$/;
+        result3 = pattSimbo.test(str);
+ 
+        //整段內容是否有空白、dash、underline
+        var pattHasSimbo = /[\-_\s]{1,}/;
+        result4 = pattHasSimbo.test(str);
+ 
+        if(result1 && result2){
+            // console.log('有中文也有英文');
+            result = false;
+        } else {
+            if(result1){
+                // console.log('有中文');
+                if(str.length >= 3){
+                    // console.log('至少兩個字');    
+                    if(testa == -1 && testb == -1){
+                        // console.log('沒有先生也沒有小姐');
+                        if(result3){
+                            // console.log('符號 合規則');
+                            if(result4){
+                                result = false;
+                            } else {
+                                result = true;
+                            }
+                        } else {
+                            // console.log('符號不合規則');
+                            result = false;
+                        }
+                    } else {
+                        // console.log('有先生或小姐');
+                        result = false;
+                    }
+                } else {    
+                    result = false;
+                }
+            } else {
+                // console.log('沒有中文');
+                result = false;
+                if(result2){
+                    // console.log('有英文');
+                    if(str.length >= 6){
+                        if(result3){
+                            // console.log('符號 合規則');
+                            result = true;
+                        } else {
+                            // console.log('符號不合規則');
+                            result = false;
+                        }
+                    } else {
+                        result = false;
+                    }
+                } else {
+                    // console.log('沒有英文');
+                    result = false;
+                }
+            }
+        }
+    } else {
+        result = true;
+    }
+    return result;
+}, "暱稱可為中文（最少三字）或英文（最少六字），英文請勿使用除了空白、底線、DASH以外的符號");
+
+
+    //hover effect function
     var homeCourse = $('.home-course'),
         logoGreen = '#209e40',
         brown = '#932009';
@@ -212,6 +360,7 @@
             .end()
             .children('.prof').css('color', brown);
     });
+
 
     var homeFeedback = $(".home-essay[data-type='feedback']"),
         homeAsk = $(".home-essay[data-type='ask']"),
@@ -254,8 +403,8 @@
             .end()
             .children('.post-time').css('color', brown);
     });
-})();
 
+});
 
 </script>
 
