@@ -5,12 +5,15 @@
 .cardstyle {
   background-color: white;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 5px 0 #A1A1A1;
-  box-shadow: 0 0 5px 0 #A1A1A1; }
+  -webkit-box-shadow: 0 0 2px 0 #A1A1A1;
+  box-shadow: 0 0 2px 0 #A1A1A1; }
+  .cardstyle:hover {
+    -webkit-box-shadow: 0 0 10px 0 #A1A1A1;
+    box-shadow: 0 0 10px 0 #A1A1A1; }
 
 body {
   font-family: "Helvetica Neue","Microsoft Yahei",sans-serif,serif;
-  background: url("../images/bg.jpg") repeat;
+  background: url("../images/bg2.jpg") repeat;
   margin-top: 80px; }
 
 hr {
@@ -60,9 +63,7 @@ nav .container {
     float: left;
     background-color: white;
     border-radius: 6px;
-    padding: 0;
-    -webkit-box-shadow: 0 0 5px 0 #A1A1A1;
-    box-shadow: 0 0 5px 0 #A1A1A1; }
+    padding: 0; }
     .list-col-4 .home-course h3,
     .list-col-4 .home-essay h3 {
       width: 100%;
@@ -96,7 +97,7 @@ nav .container {
       border-bottom-left-radius: 5px;
       color: white;
       font-size: 1.3rem;
-      margin-top: 60%;
+      margin-top: 100px;
       padding-top: 4%;
       padding-bottom: 4%; }
       .list-col-4 .home-course .bottom p,
@@ -108,6 +109,9 @@ nav .container {
         .list-col-4 .home-essay .bottom p .post-num,
         .list-col-4 .home-essay .bottom p .review-num {
           margin-left: 3%; }
+    .list-col-4 .home-course .bottom.feedback,
+    .list-col-4 .home-essay .bottom.feedback {
+      margin-top: 50px; }
   .list-col-4 .home-essay .essay-type {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -121,8 +125,6 @@ nav .container {
     background-color: #107B5D; }
   .list-col-4 .home-essay .ask {
     background-color: #f0542a; }
-  .list-col-4 .home-essay .notice {
-    background-color: #f3ae1e; }
 
 #footerDomain {
   position: relative;
@@ -308,29 +310,5 @@ hr {
         font-weight: bold; }
       .past-comment .comment-content p.post-time {
         font-size: 1rem; }
-
-.rates-row {
-  margin: 10px 0 10px 0; }
-  .rates-row p {
-    display: inline-block;
-    margin: 0;
-    text-align: center;
-    vertical-align: middle; }
-    .rates-row p:first-child {
-      border-radius: 5px;
-      border: 2px solid #209e40;
-      width: 20%;
-      padding: 5px;
-      color: #209e40;
-      font-weight: bold;
-      letter-spacing: 2px; }
-    .rates-row p:nth-child(2) {
-      width: 10%;
-      font-size: 1.4em;
-      font-weight: bold; }
-  .rates-row #slider {
-    width: 65%;
-    display: inline-block;
-    vertical-align: middle; }
 
 /*# sourceMappingURL=essay.css.map */
